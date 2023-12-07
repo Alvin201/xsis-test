@@ -12,27 +12,32 @@ Brief project description.
 
 ## Getting Started
 
-1. **Clone the repository:**
+1. **Create DB phpmyadmin:**
+    ```bash
+    create database test_xsis
+    ```
+
+2. **Clone the repository:**
     ```bash
     git clone https://github.com/Alvin201/xsis-test.git
     ```
 
-2. **Navigate to the project directory:**
+3. **Navigate to the project directory:**
     ```bash
     cd your-project
     ```
 
-3. **Install dependencies:**
+4. **Install dependencies:**
     ```bash
     composer install
     ```
 
-4. **Copy environment file:**
+5. **Copy environment file:**
     ```bash
     cp .env.example .env
     ```
 
-5. **Configure your environment:**
+6. **Configure your environment:**
     - Create a new database in PHPMyAdmin (e.g., `test_xsis`).
     - Update `.env` file with your database credentials:
         ```dotenv
@@ -41,22 +46,22 @@ Brief project description.
         DB_PASSWORD=your_db_password
         ```
 
-6. **Generate JWT Secret:**
+7. **Generate JWT Secret:**
     ```bash
     php artisan jwt:secret
     ```
 
-7. **Run Migrations:**
+8. **Run Migrations:**
     ```bash
     php artisan migrate
     ```
 
-8. **Serve the application:**
+9. **Serve the application:**
     ```bash
     php artisan serve
     ```
 
-9. **Access the API:**
+10. **Access the API:**
     Open your browser and visit [http://localhost:8000/api](http://localhost:8000/api)
 
 ## Usage
