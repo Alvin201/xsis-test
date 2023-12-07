@@ -1,0 +1,197 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API",
+        "description": "Swagger",
+        "contact": {
+            "email": "chelsea.alvin@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0",
+        "x-logo": {
+            "url": "https://via.placeholder.com/190x90.png?text=L5-Swagger"
+        }
+    },
+    "paths": {
+        "/api/v1/create-movie/": {
+            "post": {
+                "tags": [
+                    "Movie"
+                ],
+                "operationId": "11879b38b4b884556d316379bd799024",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "title": {
+                                        "description": "Title",
+                                        "type": "string",
+                                        "example": "hello world"
+                                    },
+                                    "description": {
+                                        "description": "Description",
+                                        "type": "string",
+                                        "example": "hello world"
+                                    },
+                                    "rating": {
+                                        "description": "Rating",
+                                        "type": "number",
+                                        "format": "double",
+                                        "example": 1
+                                    },
+                                    "image": {
+                                        "description": "Image",
+                                        "type": "string",
+                                        "example": ""
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    }
+                }
+            }
+        },
+        "/api/v1/update-movie/": {
+            "patch": {
+                "tags": [
+                    "Movie"
+                ],
+                "operationId": "a91cf12ed08e98e8c0e4ddd1367d70cf",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "description": "Id",
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "title": {
+                                        "description": "Title",
+                                        "type": "string",
+                                        "example": "hello world"
+                                    },
+                                    "description": {
+                                        "description": "Description",
+                                        "type": "string",
+                                        "example": "hello world"
+                                    },
+                                    "rating": {
+                                        "description": "Rating",
+                                        "type": "number",
+                                        "format": "double",
+                                        "example": 1
+                                    },
+                                    "image": {
+                                        "description": "Image",
+                                        "type": "string",
+                                        "example": ""
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    }
+                }
+            }
+        },
+        "/api/v1/delete-movie/": {
+            "delete": {
+                "tags": [
+                    "Movie"
+                ],
+                "operationId": "63b468b3f941a2190f18ca3f81a74fed",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "id": {
+                                        "description": "ID",
+                                        "type": "integer",
+                                        "example": 1
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    }
+                }
+            }
+        },
+        "/api/v1/get-movie-id": {
+            "get": {
+                "tags": [
+                    "Movie"
+                ],
+                "operationId": "b1de2b6dae3a9856b6e6d6a7e79c2557",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "ID",
+                        "required": false,
+                        "schema": {
+                            "type": "int"
+                        },
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    }
+                }
+            }
+        },
+        "/api/v1/get-all": {
+            "get": {
+                "tags": [
+                    "Movie"
+                ],
+                "operationId": "4baba75ec45ae8605ca0ee59415cbc5a",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    }
+                }
+            }
+        }
+    }
+}
